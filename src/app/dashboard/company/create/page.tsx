@@ -1,3 +1,4 @@
+"use client"
 import { CompanyCreate, CompanyCreateDefaultValues } from "@/interfaces/company"
 import { ChangeEvent, useState } from "react"
 

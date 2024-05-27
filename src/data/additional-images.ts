@@ -1,4 +1,4 @@
-import sql from "@vercel/postgres";
+import {sql} from "@vercel/postgres";
 import { ProductImage,ProductImageEdit } from "@/interfaces/additional-images";
 
 export const addImage = async (image: ProductImage) => {

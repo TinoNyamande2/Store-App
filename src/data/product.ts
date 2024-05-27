@@ -1,5 +1,5 @@
 import { ProductCreate, ProductEdit } from "@/interfaces/product";
-import sql from "@vercel/postgres";
+import {sql} from "@vercel/postgres";
 
 export const createProduct = async (product: ProductCreate) => {
   try {
