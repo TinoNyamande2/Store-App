@@ -1,15 +1,19 @@
 "use client"
 import { ProductCreate, ProductCreateDefaultvalues } from "@/interfaces/product"
 import { TextField } from "@mui/material";
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent, SyntheticEvent, useState } from "react"
 
 export const Create = () =>{
     const [inputs,setInputs] = useState<ProductCreate>(ProductCreateDefaultvalues);
-    const onFormChange = (event:ChangeEvent) =>{
-      
+    const onFormChange = (event:ChangeEvent<HTMLInputElement>) =>{
+         setInputs((prevInputs)=>({...prevInputs,[event.target.name]:event.target.value}))
+    }
+    const handleSubmit = (event:SyntheticEvent) =>{
+            event.preventDefault();
+            console.log(inputs)
     }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
              <TextField size="small" onChange={onFormChange}  name="title" label="Title"/>
              <br/>
              <TextField size="small" onChange={onFormChange}  name="category" label="Category"/>

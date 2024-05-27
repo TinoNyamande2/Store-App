@@ -68,9 +68,11 @@ body {
 }
 
 
-/* styles/Home.module.css */
+.page-container {
+  min-height: 100vh;
+  padding:"2%"
 
-/* styles/Home.module.css */
+}
 
 .container {
   min-height: 100vh;
@@ -126,6 +128,8 @@ body {
   max-height: 200px; /* Set a maximum height for the images */
   border-radius: 8px;
 }
+
+
 
 
 
