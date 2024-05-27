@@ -2,7 +2,7 @@
 import { ProductCreate, ProductCreateDefaultvalues } from "@/interfaces/product";
 import { useState, ChangeEvent, SyntheticEvent } from "react";
 
-export default function () {
+export default function Page () {
     const [inputs, setInputs] = useState<ProductCreate>(ProductCreateDefaultvalues);
     const [selectedImage, setSelectedImage] = useState<File | null>(null);
     const onFormChange = (event: ChangeEvent<HTMLInputElement>) => {
